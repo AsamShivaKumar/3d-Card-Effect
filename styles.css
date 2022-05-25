@@ -1,0 +1,128 @@
+/* scale value = 1 + ((z-transform-value)*(-1)/perspective) */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    perspective: 300px;
+}
+
+.container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.card{
+    transform-style: preserve-3d;
+    width: 350px;
+    background-color: white;
+    height: 80vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px black, 10px 10px 10px grey;
+    transition: all 1s;
+}
+
+button{
+    cursor: pointer;
+}
+
+h2{
+    text-align: left;
+}
+
+.sneaker{
+    position: absolute;
+    top: 10vh;
+    perspective: 300px;
+    transform-style: preserve-3d;
+}
+
+.details{
+    margin-top: 150px;
+    padding-left: 30px;
+    perspective: 300px;
+    transform-style: preserve-3d;
+}
+
+.details h2{
+    transition: all 1s;
+}
+
+.desc{
+    margin: 10px 0;
+    transition: all 1s;
+}
+
+.sneaker img{
+    width: 250px;
+    transition: all 1.5s;
+    z-index: 2;
+    filter: drop-shadow(30px 30px 20px rgb(67, 62, 62));
+    display: block;
+}
+
+.circle{
+    background-image: linear-gradient(to right,#ee5541,blue);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute;
+    top: -20px; 
+    left: 25px;
+    z-index: -1;
+}
+
+.sizes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    margin-left: -30px;
+    margin-top: 30px;
+    transition: all 1s;
+}
+
+.sizes button{
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin-left: 10px;
+    border: 0;
+    box-shadow: 2px 2px 10px black;
+}
+
+.active{
+    background-color: rgb(45, 42, 42);
+    color: white;
+}
+
+.buy{
+    position: absolute;
+    bottom: -10vh;
+    margin-left: calc(175px - 100px - 30px);
+    width: 200px;
+    border-radius: 30px;
+    background: #ee5541;
+    border: 0;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px 10px black;
+    /* transform: rotateX(60deg); */
+    transition: all 1s;
+}
